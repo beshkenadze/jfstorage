@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>JFStorage:Cookie Alternative</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="akira" />
+	<meta name="description" content="JFStorage,Альтернатива cookie" />
+	<meta name="keywords" content="JFStorage,alternative cookie" />
+	<meta name="ROBOTS" content="ALL" />
+</head>
+<body>
+<script language="javascript" src="storage.js"></script>
+<center>
+<input type="text" value="insert value data" name="cookieTest" id="cookieTest" />
+<input type="button" onclick="if(setCookie($('cookieTest').name,$('cookieTest').value)){alert($('cookieTest').name+' insert like '+$('cookieTest').name)}" value="Set Cookie" />
+<input type="button" onclick="alert($('cookieTest').name+' as '+getCookie($('cookieTest').name))" value="Get Cookie" />
+<input type="button" onclick="removeCookie($('cookieTest').name)" value="Delete Cookie" />
+<input type="button" onclick="if(isExistCookie($('cookieTest').name)){alert('cookie'+$('cookieTest').name+' exist!')}else{alert('cookie'+$('cookieTest').name+' NOT exist!')}" value="Is Exist Cookie?" />
+</center>
+<div style="display:block">
+<object
+  		id="flashStorage" width="0" height="0"
+  		codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+  		<param name="movie" value="storage.swf?v0.1" />
+  		<param name="quality" value="high" />
+  		<param name="bgcolor" value="#869ca7" />
+  		<param name="allowScriptAccess" value="always" />
+
+  		<embed src="storage.swf?v0.1" quality="high" bgcolor="#869ca7"
+  			width="0" height="0" name="flashStorage" align="middle"
+  			play="true"
+  			loop="false"
+  			quality="high"
+  			allowScriptAccess="always"
+  			type="application/x-shockwave-flash"
+  			pluginspage="http://www.adobe.com/go/getflashplayer">
+  		</embed>
+  </object>
+</div>
+</body>
+</html>
