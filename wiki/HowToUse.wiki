@@ -1,0 +1,36 @@
+#summary HowTo
+
+= Подключение swf файла =
+
+*Код для вставки flash объекта*
+{{{
+<object	id="flashStorage" width="0" height="0"
+  		codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+  		<param name="movie" value="JFStorage.swf?v0.1" />
+  		<param name="quality" value="high" />
+  		<param name="bgcolor" value="#869ca7" />
+  		<param name="allowScriptAccess" value="always" />
+
+  		<embed src="JFStorage.swf?v0.1" quality="high" bgcolor="#869ca7"
+  			width="0" height="0" name="flashStorage" align="middle"
+  			play="true"
+  			loop="false"
+  			quality="high"
+  			allowScriptAccess="always"
+  			type="application/x-shockwave-flash"
+  			pluginspage="http://www.adobe.com/go/getflashplayer">
+  		</embed>
+  </object>
+}}}
+*Код для вставки JavaScript*
+{{{
+<script language="javascript" src="JFStorage.js"></script>
+}}}
+==Примечание==
+id="flashStorage" и name="flashStorage" - идентификаторы flash файла, по нему мы обращаемся к методам JFStorage.
+Если его изменить, то так же надо изменять в функциях JFStorage.js
+==Файлы==
+===JFStorage.js==
+В этом файле функции для управления JFStorage.
+===JFStorage.swf==
+Сам flash файл 
