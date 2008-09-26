@@ -10,7 +10,12 @@
 	<meta name="ROBOTS" content="ALL" />
 </head>
 <body>
-<script language="javascript" src="storage.js"></script>
+<script language="javascript" src="JFStorage.js"></script>
+<script type="text/javascript">
+window.onload = function (){
+document.body.appendChild(document.createElement("script"));
+}
+</script>
 <center>
 <input type="text" value="insert value data" name="cookieTest" id="cookieTest" />
 <input type="button" onclick="if(setCookie($('cookieTest').name,$('cookieTest').value)){alert($('cookieTest').name+' insert like '+$('cookieTest').name)}" value="Set Cookie" />
@@ -22,12 +27,12 @@
 <object
   		id="flashStorage" width="0" height="0"
   		codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
-  		<param name="movie" value="storage.swf?v0.1" />
+  		<param name="movie" value="JFStorage.swf?v0.1" />
   		<param name="quality" value="high" />
   		<param name="bgcolor" value="#869ca7" />
   		<param name="allowScriptAccess" value="always" />
 
-  		<embed src="storage.swf?v0.1" quality="high" bgcolor="#869ca7"
+  		<embed src="JFStorage.swf?v0.1" quality="high" bgcolor="#869ca7"
   			width="0" height="0" name="flashStorage" align="middle"
   			play="true"
   			loop="false"

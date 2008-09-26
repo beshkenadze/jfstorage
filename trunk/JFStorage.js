@@ -33,3 +33,21 @@ function isExistCookie(key)
 {
   return getFlash('flashStorage').isExistCookie(key);
 }
+function js2Storage(id,src){
+    if(typeof window.isExistCookie == 'function'){
+        if(isExistCookie(id)){
+            var js = document.createElement("script");
+            js.id=id;
+            var source = document.createTextNode(getCookie(js.id));
+            js.appendChild(source);
+            document.body.appendChild(js);
+            
+        }else{
+            var js = document.createElement("script");
+            js.id=is;
+            js.src=src;
+            document.body.appendChild(js);
+            setCookie(js.id,js.innerHTML)
+        }
+    }
+}
